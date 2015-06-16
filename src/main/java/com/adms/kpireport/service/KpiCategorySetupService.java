@@ -23,5 +23,7 @@ public interface KpiCategorySetupService {
 	public List<KpiCategorySetup> findByNamedQuery(String namedQuery, Object...vals) throws Exception;
 
 	public List<KpiCategorySetup> findByCriteria(DetachedCriteria detachedCriteria) throws Exception;
+	
+	public int deleteByHql(String hql, Object... vals) throws Exception;
 
 }

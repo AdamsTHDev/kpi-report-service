@@ -65,5 +65,10 @@ public class KpiResultServiceImpl implements KpiResultService {
 	public List<KpiResult> findByCriteria(DetachedCriteria detachedCriteria) throws Exception {
 		return kpiResultDao.findByCriteria(detachedCriteria);
 	}
+
+	@Override
+	public int deleteByHql(String hql, Object... vals) throws Exception {
+		return kpiResultDao.bulkUpdate(hql, vals);
+	}
 	
 }

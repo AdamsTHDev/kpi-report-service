@@ -65,5 +65,10 @@ public class KpiCategorySetupServiceImpl implements KpiCategorySetupService {
 	public List<KpiCategorySetup> findByCriteria(DetachedCriteria detachedCriteria) throws Exception {
 		return kpiCategorySetupDao.findByCriteria(detachedCriteria);
 	}
+
+	@Override
+	public int deleteByHql(String hql, Object... vals) throws Exception {
+		return kpiCategorySetupDao.bulkUpdate(hql, vals);
+	}
 	
 }
